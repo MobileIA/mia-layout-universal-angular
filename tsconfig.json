@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@mobileia/layout-universal": [
+        "dist/mobileia/layout-universal"
+      ],
+      "@mobileia/layout-universal/*": [
+        "dist/mobileia/layout-universal/*"
+      ]
+    }
   }
 }

@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "@mobileia/layout-universal": {
+      "root": "projects/mobileia/layout-universal",
+      "sourceRoot": "projects/mobileia/layout-universal/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mobileia/layout-universal/tsconfig.lib.json",
+            "project": "projects/mobileia/layout-universal/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mobileia/layout-universal/src/test.ts",
+            "tsConfig": "projects/mobileia/layout-universal/tsconfig.spec.json",
+            "karmaConfig": "projects/mobileia/layout-universal/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mobileia/layout-universal/tsconfig.lib.json",
+              "projects/mobileia/layout-universal/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "mia-layout-universal"
