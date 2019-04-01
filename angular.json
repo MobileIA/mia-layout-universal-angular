@@ -147,6 +147,11 @@
                     "options": {
                         "tsConfig": "projects/mobileia/layout-universal/tsconfig.lib.json",
                         "project": "projects/mobileia/layout-universal/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "project": "projects/mobileia/layout-universal/ng-package.prod.json"
+                        }
                     }
                 },
                 "test": {
