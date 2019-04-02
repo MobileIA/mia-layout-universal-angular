@@ -5,14 +5,14 @@
             <div class="col-md-4 p-0">
                 <div class="auth-innerleft">
                     <div class="text-center">
-                        <img src="assets/images/logo-login.png" class="logo-login" alt="">
+                        <img *ngIf="designImageLogo" [src]="designImageLogo" class="logo-login" alt="" />
                         <hr>
                         <div class="social-media">
                             <ul class="list-inline">
-                                <li class="list-inline-item"><i class="fa fa-facebook txt-fb" aria-hidden="true"></i></li>
-                                <li class="list-inline-item"><i class="fa fa-google-plus txt-google-plus" aria-hidden="true"></i></li>
-                                <li class="list-inline-item"><i class="fa fa-twitter txt-twitter" aria-hidden="true"></i></li>
-                                <li class="list-inline-item"><i class="fa fa-linkedin txt-linkedin" aria-hidden="true"></i></li>
+                                <li *ngIf="designUrlFacebook != ''" class="list-inline-item"><i class="fa fa-facebook txt-fb" aria-hidden="true"></i></li>
+                                <li *ngIf="designUrlGoogle != ''" class="list-inline-item"><i class="fa fa-google-plus txt-google-plus" aria-hidden="true"></i></li>
+                                <li *ngIf="designUrlTwitter != ''" class="list-inline-item"><i class="fa fa-twitter txt-twitter" aria-hidden="true"></i></li>
+                                <li *ngIf="designUrlLinkedin != ''" class="list-inline-item"><i class="fa fa-linkedin txt-linkedin" aria-hidden="true"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -24,22 +24,25 @@
                         <h4>{{ designTitle }}</h4>
                         <h6>{{ designCaption }}</h6>
                         <div class="card mt-4 p-4 mb-0">
-                            <form class="theme-form">
+                            <form class="theme-form" [formGroup]="loginForm" (ngSubmit)="submit()">
                                 <div class="form-group">
                                     <label class="col-form-label pt-0">{{ designLabelEmail }}</label>
-                                    <input type="text" class="form-control form-control-lg" required>
+                                    <input type="text" formControlName="email" class="form-control form-control-lg" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="col-form-label">{{ designLabelPassword }}</label>
-                                    <input type="password" class="form-control form-control-lg" required>
+                                    <input type="password" formControlName="password" class="form-control form-control-lg" required />
                                 </div>
                                 <div *ngIf="designHasRemember" class="checkbox p-0">
                                     <input id="checkbox1" type="checkbox">
                                     <label for="checkbox1">Remember me</label>
                                 </div>
+                                <div *ngIf="loginMessageError != ''" class="alert alert-danger">
+                                    <span>{{ loginMessageError }}</span>
+                                </div>
                                 <div class="form-group form-row mt-3 mb-0">
                                     <div class="col-md-3">
-                                        <button type="submit" class="btn btn-secondary {{ designBtnColorClass }}">LOGIN</button>
+                                        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-secondary {{ designBtnColorClass }}">INGRESAR</button>
                                     </div>
                                 </div>
                             </form>

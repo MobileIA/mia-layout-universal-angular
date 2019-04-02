@@ -7,13 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: SystemComponent,
-    children: []
+    //children: []
   },
   {
     path: 'login',
     component: LoginComponent,
     data: {
-      'success_route' : 'index'
+      'success_route' : '',
+      'image_logo': 'assets/images/logo-login.png'
     }
   }
 ];

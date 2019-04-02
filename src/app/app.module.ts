@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutUniversalModule } from 'projects/mobileia/layout-universal/src/public_api';
 import { SystemComponent } from './pages/system/system.component';
+import { AuthenticationModule } from '@mobileia/authentication';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SystemComponent } from './pages/system/system.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthenticationModule.forRoot({ apiKey: '23' }),
     LayoutUniversalModule
   ],
   providers: [],

@@ -55,11 +55,20 @@ export class AppModule { }
     path: 'login',
     component: LoginComponent,
     data: {
-        'success_route' : 'index'
+        'success_route' : 'index', // ruta a donde desea que se rediriga una vez logueado correctamente
+        'image_background': '', // URL de la imagen de fondo
+        'image_logo': '', // URL de la imagen del logo
+        'title_box': '', // Titulo de la pagina
+        'caption_page': '', // Texto debajo del titulo
+        'button_color': '', // Clase custom para agregar al boton de login
+        'url_facebook': '',
+        'url_twitter': '',
+        'url_google': '',
+        'url_linkedin': '',
+        'url_instagram': '',
     }
 }
 ```
-2. Reemplazar la variable "success_route", por la ruta a donde desea que se rediriga una vez logueado correctamente.
 
 
 ## Code scaffolding
