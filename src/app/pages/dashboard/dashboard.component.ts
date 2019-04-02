@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  public breadcrumb = [
+    { 'title': 'Inicio', 'icon': 'fa-home', 'path': '/' },
+    { 'title': 'Dashboard', 'icon': '', 'is_active': true },
+  ];
+
   constructor() { }
 
   ngOnInit() {

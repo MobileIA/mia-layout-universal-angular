@@ -11,9 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarWithoutTopbarComponent } from './sidebar-without-topbar/sidebar-without-topbar.component';
 import { BoxBusinessOneComponent } from './widgets/box-business-one/box-business-one.component';
 import { CountUpModule } from 'countup.js-angular2';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
-  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent, BoxBusinessOneComponent],
+  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent, BoxBusinessOneComponent, PageHeaderComponent],
   imports: [
     BrowserModule,
     RouterModule,
@@ -22,6 +23,6 @@ import { CountUpModule } from 'countup.js-angular2';
     HttpClientModule,
     CountUpModule
   ],
-  exports: [LayoutComponent, LoginComponent, LayoutComponent, BoxBusinessOneComponent]
+  exports: [LayoutComponent, LoginComponent, LayoutComponent, BoxBusinessOneComponent, PageHeaderComponent]
 })
 export class LayoutUniversalModule { }

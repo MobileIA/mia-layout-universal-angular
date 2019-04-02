@@ -7,7 +7,7 @@
             <mia-layout-universal-sidebar *ngIf="hasTopbar"></mia-layout-universal-sidebar>
             <mia-layout-universal-sidebar-without-topbar *ngIf="!hasTopbar" [designImgLogo]="designImgLogo" [menuUserItems]="sidebarMenuAccount" [menuItems]="sidebarMenu" [designHasSupportBox]="sidebarHasSupportBox"></mia-layout-universal-sidebar-without-topbar>
         </div>
-        <div class="page-body">
+        <div class="page-body" [ngClass]="{'page-body-without-topbar': !hasTopbar}">
             <router-outlet></router-outlet>
         </div>
     </div>

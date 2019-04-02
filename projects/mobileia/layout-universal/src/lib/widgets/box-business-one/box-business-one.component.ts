@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'mia-box-business-one',
+  selector: 'mia-layout-universal-box-business-one',
   templateUrl: './box-business-one.component.html',
   styleUrls: ['./box-business-one.component.css']
 })
