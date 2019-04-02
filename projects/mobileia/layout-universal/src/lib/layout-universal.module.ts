@@ -12,9 +12,10 @@ import { SidebarWithoutTopbarComponent } from './sidebar-without-topbar/sidebar-
 import { BoxBusinessOneComponent } from './widgets/box-business-one/box-business-one.component';
 import { CountUpModule } from 'countup.js-angular2';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { BoxWeatherComponent } from './widgets/box-weather/box-weather.component';
 
 @NgModule({
-  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent, BoxBusinessOneComponent, PageHeaderComponent],
+  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent, BoxBusinessOneComponent, PageHeaderComponent, BoxWeatherComponent],
   imports: [
     BrowserModule,
     RouterModule,
@@ -23,6 +24,6 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     HttpClientModule,
     CountUpModule
   ],
-  exports: [LayoutComponent, LoginComponent, LayoutComponent, BoxBusinessOneComponent, PageHeaderComponent]
+  exports: [LayoutComponent, LoginComponent, LayoutComponent, BoxBusinessOneComponent, PageHeaderComponent, BoxWeatherComponent]
 })
 export class LayoutUniversalModule { }
