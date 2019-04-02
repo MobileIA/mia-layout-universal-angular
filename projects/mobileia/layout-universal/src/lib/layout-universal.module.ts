@@ -9,16 +9,19 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarWithoutTopbarComponent } from './sidebar-without-topbar/sidebar-without-topbar.component';
+import { BoxBusinessOneComponent } from './widgets/box-business-one/box-business-one.component';
+import { CountUpModule } from 'countup.js-angular2';
 
 @NgModule({
-  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent],
+  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent, BoxBusinessOneComponent],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CountUpModule
   ],
-  exports: [LayoutComponent, LoginComponent, LayoutComponent]
+  exports: [LayoutComponent, LoginComponent, LayoutComponent, BoxBusinessOneComponent]
 })
 export class LayoutUniversalModule { }

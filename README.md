@@ -10,6 +10,7 @@ npm install bootstrap --save
 npm install animate --save
 npm install animate.css --save
 npm install font-awesome --save
+npm install countup.js-angular2 --save
 npm install @ngx-pwa/local-storage --save
 npm install @mobileia/core --save
 npm install @mobileia/authentication --save

@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { LayoutUniversalModule } from 'projects/mobileia/layout-universal/src/public_api';
 import { SystemComponent } from './pages/system/system.component';
 import { AuthenticationModule } from '@mobileia/authentication';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SystemComponent
+    SystemComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
