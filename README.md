@@ -6,6 +6,10 @@ Libreria para utilizar facilmente el Template Universal.
 1. Instalar libreria en el proyecto:
 ```bash
 npm install jquery --save
+npm install bootstrap --save
+npm install animate --save
+npm install animate.css --save
+npm install font-awesome --save
 npm install @ngx-pwa/local-storage --save
 npm install @mobileia/core --save
 npm install @mobileia/authentication --save
@@ -38,6 +42,10 @@ export class AppModule { }
 <!--Google font-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+```
+5. Agregar Assets en "angular.json"
+```json
+
 ```
 
 ## Como usar pantalla de login:
