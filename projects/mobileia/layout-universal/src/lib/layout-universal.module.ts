@@ -19,6 +19,6 @@ import { SidebarWithoutTopbarComponent } from './sidebar-without-topbar/sidebar-
     ReactiveFormsModule,
     HttpClientModule
   ],
-  exports: [LayoutComponent, LoginComponent]
+  exports: [LayoutComponent, LoginComponent, LayoutComponent]
 })
 export class LayoutUniversalModule { }
