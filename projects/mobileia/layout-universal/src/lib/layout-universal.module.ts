@@ -8,9 +8,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarWithoutTopbarComponent } from './sidebar-without-topbar/sidebar-without-topbar.component';
 
 @NgModule({
-  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent],
+  declarations: [LayoutUniversalComponent, LayoutComponent, HeaderComponent, SidebarComponent, LoginComponent, SidebarWithoutTopbarComponent],
   imports: [
     BrowserModule,
     RouterModule,

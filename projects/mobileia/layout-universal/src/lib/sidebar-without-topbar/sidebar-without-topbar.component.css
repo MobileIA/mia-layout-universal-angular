@@ -1,0 +1,26 @@
+.sidebar-logo {
+    padding: 20px;
+}
+
+.sidebar-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sidebar-user {
+    padding-bottom: 15px !important;
+}
+
+.sidebar-menu-account {
+    padding: 0px !important;
+    padding-left: 10px !important;
+    text-align: left;
+}
+
+.sidebar-menu-account a {
+    text-transform: none !important;
+}
+
+.sidebar-title {
+    margin-top: 15px !important;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
+
+  @Input() hasTopbar = true;
+  @Input() designImgLogo = '';
+
+  @Input() sidebarMenuAccount = [];
+  @Input() sidebarMenu = [];
+  @Input() sidebarHasSupportBox = true;
 
   constructor() { }
 
