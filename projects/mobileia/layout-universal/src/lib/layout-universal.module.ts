@@ -18,6 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  exports: [LayoutComponent]
+  exports: [LayoutComponent, LoginComponent]
 })
 export class LayoutUniversalModule { }
