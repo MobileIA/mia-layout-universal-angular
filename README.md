@@ -45,8 +45,20 @@ export class AppModule { }
 ```
 5. Agregar Assets en "angular.json"
 ```json
-
+"styles": [
+    "node_modules/font-awesome/scss/font-awesome.scss",
+    "node_modules/@mobileia/layout-universal/assets/template-universal/app.scss",
+    "node_modules/@mobileia/layout-universal/assets/template-universal/css/style.css",
+    "node_modules/@mobileia/layout-universal/assets/template-universal/css/responsive.css",
+    "src/styles.scss"
+],
+"scripts": [
+    "node_modules/jquery/dist/jquery.min.js"
+]
 ```
+6. Copiar archivos de Assets:
+* assets/js/sidebar-menu.js
+* assets/images/user/1.jpg
 
 ## Como usar pantalla de login:
 1. Agregar registro al Route:
