@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as $ from 'jquery';
 import { AuthenticationService, MIAUser } from '@mobileia/authentication';
+import { LayoutSidebarService } from '../services/layout-sidebar.service';
 
 @Component({
   selector: 'mia-layout-universal-sidebar-without-topbar',
@@ -17,7 +18,9 @@ export class SidebarWithoutTopbarComponent implements OnInit {
   @Input() menuUserItems = [];
   @Input() menuItems = [];
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(
+    private authService: AuthenticationService,
+    private sidebarService: LayoutSidebarService) { }
 
   ngOnInit() {
     // Cargar JS para el menu
@@ -35,5 +38,10 @@ export class SidebarWithoutTopbarComponent implements OnInit {
       }
       this.currentUser = data;
     });
+  }
+
+  public clickItemMenu(item): boolean{
+    this.sidebarService.sidebarMenuObservable.next(item);
+    return false;
   }
 }

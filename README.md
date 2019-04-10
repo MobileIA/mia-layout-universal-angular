@@ -98,7 +98,7 @@ public menuUserItems = [
     path: '/pages/stater-kit', title: 'Configuración', icon: 'icon-settings', type: 'link'
   },
   {
-    path: '/pages/stater-kit', title: 'Cerrar sesión', icon: 'icon-power-off', type: 'link'
+    title: 'Cerrar sesión', icon: 'icon-power-off', type: 'function'
   },
 ];
 public menuItems = [
@@ -157,6 +157,13 @@ public menuItems = [
         path: 'http://support.pixelstrap.com/help-center', title: 'Raise Support', icon: 'icon-headphone-alt', type: 'extTabLink'
     },
 ];
+```
+3. Observar los click del sidebar:
+```ts
+// private sidebarService: LayoutSidebarService
+this.sidebarService.sidebarMenuObservable.subscribe(item => {
+    // Realizar accion requerida
+});
 ```
 
 

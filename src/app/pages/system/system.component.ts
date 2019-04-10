@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutSidebarService } from 'projects/mobileia/layout-universal/src/public_api';
 
 @Component({
   selector: 'app-system',
@@ -15,7 +16,7 @@ export class SystemComponent implements OnInit {
       path: '/pages/stater-kit', title: 'Configuración', icon: 'icon-settings', type: 'link'
     },
     {
-      path: '/pages/stater-kit', title: 'Cerrar sesión', icon: 'icon-power-off', type: 'link'
+      title: 'Cerrar sesión', icon: 'icon-power-off', type: 'function'
     },
   ];
   public menuItems = [
@@ -23,7 +24,7 @@ export class SystemComponent implements OnInit {
       headTitle: 'General'
     }, 
     {
-      path: '/pages/stater-kit', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
+      path: '/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
     },
     {
       title: 'Starter Kit', icon: 'icon-anchor', type: 'sub', children: [{
@@ -75,9 +76,12 @@ export class SystemComponent implements OnInit {
       },
   ];
 
-  constructor() { }
+  constructor(private sidebarService: LayoutSidebarService) { }
 
   ngOnInit() {
+    this.sidebarService.sidebarMenuObservable.subscribe(item => {
+      console.log(item);
+    });
   }
 
 }
