@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LayoutSidebarService {
 
-  public sidebarMenuObservable: BehaviorSubject<number> = new BehaviorSubject<any>({});
+  public sidebarMenuObservable: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
   constructor() { }
 }
