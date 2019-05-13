@@ -5,7 +5,8 @@
     <div class="page-body-wrapper">
         <div class="page-sidebar custom-scrollbar" [ngClass]="{'page-sidebar-without-topbar': !hasTopbar}">
             <mia-layout-universal-sidebar *ngIf="hasTopbar"></mia-layout-universal-sidebar>
-            <mia-layout-universal-sidebar-without-topbar *ngIf="!hasTopbar" [designImgLogo]="designImgLogo" [menuUserItems]="sidebarMenuAccount" [menuItems]="sidebarMenu" [designHasSupportBox]="sidebarHasSupportBox"></mia-layout-universal-sidebar-without-topbar>
+            <mia-layout-universal-sidebar-without-topbar *ngIf="!hasTopbar" [designImgLogo]="designImgLogo" [menuUserItems]="sidebarMenuAccount" [menuItems]="sidebarMenu" [designHasSupportBox]="sidebarHasSupportBox" [helpBoxTitle]="helpBoxTitle" [helpBoxPhone]="helpBoxPhone"
+                [helpBoxEmail]="helpBoxEmail"></mia-layout-universal-sidebar-without-topbar>
         </div>
         <div class="page-body" [ngClass]="{'page-body-without-topbar': !hasTopbar}">
             <router-outlet></router-outlet>

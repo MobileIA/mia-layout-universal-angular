@@ -112,13 +112,13 @@
 </ul>
 <div *ngIf="designHasSupportBox" class="sidebar-widget text-center">
     <div class="sidebar-widget-top">
-        <h6 class="mb-2 fs-14">Need Help</h6>
+        <h6 class="mb-2 fs-14">{{ helpBoxTitle }}</h6>
         <i class="icon-bell"></i>
     </div>
     <div class="sidebar-widget-bottom p-20 m-20">
-        <p>+1 234 567 899
-            <br>help@yourdomain.com
-            <br><a href="javascript:void(0)">Visit FAQ</a>
+        <p>
+            {{ helpBoxPhone }}<br> {{ helpBoxEmail }}
+            <!--<br><a href="javascript:void(0)">Visit FAQ</a>-->
         </p>
     </div>
 </div>

@@ -18,6 +18,10 @@ export class SidebarWithoutTopbarComponent implements OnInit {
   @Input() menuUserItems = [];
   @Input() menuItems = [];
 
+  @Input() helpBoxTitle = 'Need Help';
+  @Input() helpBoxPhone = '+1 234 567 899';
+  @Input() helpBoxEmail = 'help@mobileia.com';
+
   constructor(
     private authService: AuthenticationService,
     private sidebarService: LayoutSidebarService) { }

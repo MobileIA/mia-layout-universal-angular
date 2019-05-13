@@ -15,6 +15,10 @@ export class LayoutComponent implements OnInit {
   @Input() sidebarMenu = [];
   @Input() sidebarHasSupportBox = true;
 
+  @Input() helpBoxTitle = 'Need Help';
+  @Input() helpBoxPhone = '+1 234 567 899';
+  @Input() helpBoxEmail = 'help@mobileia.com';
+
   constructor() { }
 
   ngOnInit() {
