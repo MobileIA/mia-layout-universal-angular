@@ -131,7 +131,7 @@ export class LoginComponent implements OnInit {
    */
   processRedirectParams(params): Observable<boolean> {
       const redirect = params.redirect;
-      if (redirect !== '/' && redirect !== '' && redirect !== undefined && redirect !== null
+      if (redirect !== '/login' && redirect !== '/' && redirect !== '' && redirect !== undefined && redirect !== null
       && redirect !== '%2F' && redirect !== '/login;redirect=%2F') {
         this.routeSuccess = redirect;
       }

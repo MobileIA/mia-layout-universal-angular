@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { SystemComponent } from './pages/system/system.component';
 import { LoginComponent } from 'projects/mobileia/layout-universal/src/lib/pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuard } from '@mobileia/authentication';
 
 const routes: Routes = [
   {
     path: '',
     component: SystemComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'dashboard',
@@ -19,7 +21,7 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: {
-      'success_route' : '',
+      'success_route' : 'dashboard',
       'image_logo': 'assets/images/logo-login.png'
     }
   }
